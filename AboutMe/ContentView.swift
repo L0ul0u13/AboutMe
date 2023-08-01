@@ -6,16 +6,36 @@
 //
 
 import SwiftUI
+//COMMENT
 
 struct ContentView: View {
+    
+    @State private var facts = "Louize mazouz"
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text(facts)
+                .font(.largeTitle)
+                .fontWeight(.ultraLight)
+            Text("(Loulou)")
+                .font(.title)
+                .fontWeight(.thin)
+            Image("Ilyassou")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fit)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
+            Button("To know more press here") {
+                facts = "I love listening to music all types. The most importent thing to me is my friends and family. my hobbie is sports. "
+                
+            }
+            .multilineTextAlignment(.center)
+            .buttonStyle(.borderedProminent)
+            .tint(.blue)
+          
+            
+            
         }
-        .padding()
     }
 }
 
